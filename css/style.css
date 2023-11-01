@@ -23,10 +23,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  position: sticky;
-  top: 0;
   background-color: white;
-  z-index: 10000; /* 设置一个很高的z-index值 */
 }
 
 #logo {
@@ -87,6 +84,12 @@ header {
 @media (min-width: 900px) {
   .card {
     flex-basis: 275px;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 10000;
   }
 }
 
@@ -149,7 +152,3 @@ header {
     align-items: center;
   }
 
-  .nav_item {
-    margin: 5px 0;
-  }
-}
