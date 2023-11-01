@@ -1,1 +1,2 @@
-permalink: /flex.html
+plugins:
+  - jekyll-redirect-from
