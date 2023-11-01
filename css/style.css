@@ -122,13 +122,17 @@ header {
     align-items: stretch;
   }
 
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
   .nav_links {
     flex-direction: column;
     align-items: center;
   }
 
   .nav_item {
-    display: block;
-    text-align: center;
+    margin: 5px 0;
   }
 }
