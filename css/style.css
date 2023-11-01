@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+@keyframes logoAnimation {
+  from {
+    width: 25px;
+    opacity: 0;
+  }
+  to {
+    width: 475px;
+    opacity: 1;
+  }
+}
+
+body {
+  font-family: 'Poppins', serif;
+  background-image: url('path/to/your/concrete_seamless.png');
+  background-color: #f1f1f1;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_links {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.nav_item a {
+  text-decoration: none;
+  color: #000; /* Change to your desired color */
+  padding: 10px;
+}
+
+.nav_item a:visited {
+  color: #000; /* Change to your desired color */
+}
+
+.card > header {
+  background: #288088;
+  border: 2px solid #45ADAD;
+  padding: 20px 0;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+
+.card > header > h3 {
+  margin: 0;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 450px;
+}
+
+.pricing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery img {
+  border: 10px solid #50C7C7;
+  margin: 10px;
+  width: 300px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 900px) {
+  .card {
+    flex-basis: 275px;
+  }
+}
+
+@media print {
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: none;
+  }
+
+  nav, .nav_links {
+    display: block;
+  }
+
+  .pricing {
+    align-items: flex-end;
+  }
+
+  .card {
+    border: 2px solid #45ADDD;
+    flex-basis: 325px;
+  }
+
+  .gallery {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #logo {
+    animation: none;
+  }
+}
