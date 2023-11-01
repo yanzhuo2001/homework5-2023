@@ -23,6 +23,10 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 10000; /* 设置一个很高的z-index值 */
 }
 
 #logo {
@@ -93,15 +97,15 @@ header {
   }
 
   header {
-    display: block;
-    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .nav_links {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    padding: 0 10px; /* Add padding to ensure links don't touch the edge */
   }
 
   .nav_item {
@@ -118,12 +122,10 @@ header {
     flex-basis: 325px;
   }
 
-  .gallery, #gallery {
+  .gallery, #gallery, .skip {
     display: none;
   }
 }
-
-
 
 @media (prefers-reduced-motion: reduce) {
   #logo {
