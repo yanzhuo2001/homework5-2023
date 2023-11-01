@@ -85,7 +85,6 @@ header {
     flex-basis: 275px;
   }
 }
-
 @media print {
   body {
     font-family: Arial, Helvetica, sans-serif;
@@ -102,6 +101,7 @@ header {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    padding: 0 10px; /* 添加一些左右的内边距 */
   }
 
   .nav_item {
