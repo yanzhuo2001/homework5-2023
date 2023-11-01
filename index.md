@@ -1,5 +1,5 @@
 ---
-redirect_from:
+redirect_to:
   - /flex.html
 ---
 
