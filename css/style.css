@@ -58,9 +58,9 @@ header {
   display: flex;
   flex-direction: column;
   flex: 1 0 450px;
-  margin: 10px;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
+  margin: 10px;
 }
 
 .pricing {
@@ -136,11 +136,12 @@ header {
 
   .pricing {
     align-items: flex-end;
+    margin: 10px;
   }
 
   .card {
     border: 2px solid #45ADDD;
-    flex-basis: calc(16%);
+    flex-basis: 175px;
     margin-right: 5px;
     page-break-inside: avoid;
   }
