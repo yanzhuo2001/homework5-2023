@@ -32,7 +32,6 @@ header {
 
 .nav_links {
   display: flex;
-  list-style: none;
   padding: 0;
 }
 
@@ -67,6 +66,7 @@ header {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  margin: 70px;
 }
 
 .gallery img {
@@ -85,15 +85,30 @@ header {
   .card {
     flex-basis: 275px;
   }
-
+  .nav_links {
+    flex-direction: row; /* Aligns the links horizontally */
+    justify-content: center; /* This will center the links horizontally; adjust as needed */
+    padding: 0;
+  }
   header {
     position: sticky;
     top: 0;
     z-index: 10000;
   }
+
+  .card > header, .card > ul {
+    position: relative; /* or 'static' depending on your layout */
+    /* The rest of your styles */
+    z-index: 1;
+  }
 }
 
 @media print {
+  @page {
+    size: A4 portrait;
+    margin: 10mm;
+  }
+
   body {
     font-family: Arial, Helvetica, sans-serif;
     background-image: none;
@@ -107,7 +122,8 @@ header {
 
   .nav_links {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row !important;
+    justify-content: center;
     width: 100%;
   }
 
@@ -122,7 +138,9 @@ header {
 
   .card {
     border: 2px solid #45ADDD;
-    flex-basis: 325px;
+    flex-basis: calc(16%);
+    margin-right: 5px;
+    page-break-inside: avoid;
   }
 
   .gallery, #gallery, .skip {
@@ -138,7 +156,7 @@ header {
 
 @media (max-width: 900px) {
   .pricing {
-    flex-direction: column;
+    flex-direction: row;
     align-items: stretch;
   }
 
@@ -151,4 +169,4 @@ header {
     flex-direction: column;
     align-items: center;
   }
-
+}
